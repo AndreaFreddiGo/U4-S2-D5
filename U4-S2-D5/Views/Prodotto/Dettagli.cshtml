@@ -1,0 +1,16 @@
+﻿@using U4_S2_D5.Services
+
+@model Prodotto
+
+<h1>@Model.Nome</h1>
+<img src="@Model.ImmagineCopertina" alt="@Model.Nome" />
+<p>@Model.Prezzo €</p>
+<p>@Model.Descrizione</p>
+
+<div class="immagini-aggiuntive">
+    @foreach (var immagine in Model.ImmaginiAggiuntive)
+    {
+        <img src="@Url.Content(immagine)" alt="@Model.Nome" />
+    }
+</div>
+
