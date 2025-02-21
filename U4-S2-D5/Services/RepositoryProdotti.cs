@@ -9,7 +9,7 @@ namespace U4_S2_D5.Services
     new Prodotto 
     { 
         Id = Guid.NewGuid(),
-        Nome = "Scarpa Sportiva Alpha", 
+        Nome = "Scarpa Sportiva FrontEnd", 
         Prezzo = 79.99m, 
         Descrizione = "Scarpa da ginnastica leggera e confortevole, ideale per l'allenamento quotidiano.",
         ImmagineCopertina = "/images/alpha.webp", 
@@ -18,7 +18,7 @@ namespace U4_S2_D5.Services
     new Prodotto 
     { 
         Id = Guid.NewGuid(),
-        Nome = "Scarpa Sportiva Beta", 
+        Nome = "Scarpa Sportiva BackEnd", 
         Prezzo = 89.99m, 
         Descrizione = "Scarpa da corsa con ammortizzazione avanzata per una performance ottimale.",
         ImmagineCopertina = "/images/beta.webp", 
@@ -27,7 +27,7 @@ namespace U4_S2_D5.Services
     new Prodotto 
     { 
         Id = Guid.NewGuid(),
-        Nome = "Scarpa Sportiva Gamma", 
+        Nome = "Scarpa Sportiva FullStack", 
         Prezzo = 69.99m, 
         Descrizione = "Scarpa versatile per sport indoor, con supporto extra per le caviglie.",
         ImmagineCopertina = "/images/gamma.webp", 

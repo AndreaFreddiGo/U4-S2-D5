@@ -2,15 +2,44 @@
 
 @model Prodotto
 
-<h1>@Model.Nome</h1>
-<img src="@Model.ImmagineCopertina" alt="@Model.Nome" />
-<p>@Model.Prezzo €</p>
-<p>@Model.Descrizione</p>
+<div class="container my-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-8">
+            <div class="card shadow-lg p-4">
 
-<div class="immagini-aggiuntive">
-    @foreach (var immagine in Model.ImmaginiAggiuntive)
-    {
-        <img src="@Url.Content(immagine)" alt="@Model.Nome" />
-    }
+                <div class="row">
+                    <div class="col-md-4">
+                        <img src="@Model.ImmagineCopertina" class="img-fluid rounded product-image" alt="@Model.Nome">
+                    </div>
+                    @foreach (var immagine in Model.ImmaginiAggiuntive)
+                    {
+                        <div class="col-md-4">
+                            <img src="@Url.Content(immagine)" class="img-fluid rounded product-image" alt="@Model.Nome">
+                        </div>
+                    }
+                </div>
+
+                <div class="text-center mt-4">
+                    <h2 class="card-title">@Model.Nome</h2>
+                    <h4 class="text-primary">€@Model.Prezzo</h4>
+                    <p class="card-text">@Model.Descrizione</p>
+                    <a href="javascript:history.back()" class="btn btn-secondary mt-3">Torna indietro</a>
+                </div>
+
+            </div>
+        </div>
+    </div>
 </div>
 
+<style>
+    .product-image {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        transition: transform 0.3s ease-in-out;
+    }
+
+        .product-image:hover {
+            transform: scale(1.05);
+        }
+</style>
