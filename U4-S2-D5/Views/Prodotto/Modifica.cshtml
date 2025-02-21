@@ -1,0 +1,25 @@
+﻿@model U4_S2_D5.Models.Prodotto
+
+<div class="card" style="width: 50%; margin: auto; padding: 20px;">
+    <h2 class="card-title">Modifica Prodotto</h2>
+    <div class="card-body">
+        <form asp-action="Modifica" method="post">
+            <input type="hidden" asp-for="Id" />
+            <div class="mb-3">
+                <label class="form-label">Nome:</label>
+                <input type="text" asp-for="Nome" class="form-control" required />
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Descrizione:</label>
+                <textarea asp-for="Descrizione" class="form-control" required></textarea>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Prezzo:</label>
+                <input type="number" asp-for="Prezzo" step="0.01" class="form-control" required />
+            </div>
+            <button type="submit" class="btn btn-primary">Salva Modifiche</button>
+            <a href="@Url.Action("Dettagli", new { id = Model.Id })" class="btn btn-secondary">Annulla</a>
+        </form>
+    </div>
+</div>
+

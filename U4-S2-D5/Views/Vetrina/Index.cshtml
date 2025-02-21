@@ -17,6 +17,7 @@
                             <a href="@Url.Action("Dettagli", "Prodotto", new { id = prodotto.Id })" class="btn btn-outline-success">
                                 Scopri di più
                             </a>
+                            <a href="@Url.Action("Elimina", "Prodotto", new { id = prodotto.Id })" onclick="return confirm('Sei sicuro di voler eliminare questo prodotto?');" class="btn btn-outline-danger">Elimina</a>
                         </div>
                     </div>
                 </div>
