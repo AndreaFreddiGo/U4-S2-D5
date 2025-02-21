@@ -1,6 +1,6 @@
 ﻿@model List<Prodotto>
 
-<h1 class="text-center my-4">Vetrina</h1>
+<h1 class="my-4 text-white">Vetrina</h1>
 
 <div class="container">
     <div class="row">
@@ -10,7 +10,7 @@
             {
                 <div class="col-md-4 mb-4">
                     <div class="card shadow-sm">
-                        <img src="@prodotto.ImmagineCopertina" class="card-img-top" alt="@prodotto.Nome">
+                        <img src="@prodotto.ImmagineCopertina" class="card-img-top shadow-image" alt="@prodotto.Nome">
                         <div class="card-body">
                             <h5 class="card-title">@prodotto.Nome</h5>
                             <p class="card-text"><strong>Prezzo:</strong> €@prodotto.Prezzo</p>

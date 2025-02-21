@@ -9,13 +9,15 @@
 
                 <div class="row">
                     <div class="col-md-4">
-                        <img src="@Model.ImmagineCopertina" class="img-fluid rounded product-image" alt="@Model.Nome">
+                        <img src="@Model.ImmagineCopertina" class="img-fluid rounded product-image shadow-image" alt="@Model.Nome">
                     </div>
                     @foreach (var immagine in Model.ImmaginiAggiuntive)
                     {
                         <div class="col-md-4">
-                            <img src="@Url.Content(immagine)" class="img-fluid rounded product-image" alt="@Model.Nome">
+                            <img src="@Url.Content(immagine)" class="img-fluid rounded product-image shadow-image" alt="@Model.Nome">
                         </div>
+
+
                     }
                 </div>
 
@@ -23,7 +25,7 @@
                     <h2 class="card-title">@Model.Nome</h2>
                     <h4 class="text-primary">€@Model.Prezzo</h4>
                     <p class="card-text">@Model.Descrizione</p>
-                    <a href="javascript:history.back()" class="btn btn-secondary mt-3">Torna indietro</a>
+                    <a href="javascript:history.back()" class="btn btn-outline-dark mt-3">Torna indietro</a>
                 </div>
 
             </div>
